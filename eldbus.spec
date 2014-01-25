@@ -3,18 +3,19 @@
 # Conditional build:
 %bcond_without	static_libs	# don't build static library
 #
-%define		ecore_ver	1.7.9
-%define		eina_ver	1.7.9
+%define		ecore_ver	1.7.10
+%define		eina_ver	1.7.10
 
 Summary:	Easy access to D-Bus from EFL applications
 Summary(pl.UTF-8):	Łatwy dostęp do usługi D-Bus z aplikacji EFL
 Name:		eldbus
-Version:	1.7.9
+Version:	1.7.10
 Release:	1
 License:	LGPL v2.1+
 Group:		Libraries
 Source0:	http://download.enlightenment.org/releases/%{name}-%{version}.tar.bz2
-# Source0-md5:	f86ddcdfbb3a3df5654e72940cd7c0b5
+# Source0-md5:	61fa0a1e555fa8eba3e6f24f8af80618
+Patch0:		%{name}-link.patch
 URL:		http://git.enlightenment.org/legacy/eldbus.git/
 BuildRequires:	autoconf >= 2.60
 BuildRequires:	automake >= 1.6
@@ -70,6 +71,7 @@ Statyczna biblioteka eldbus.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 %{__libtoolize}

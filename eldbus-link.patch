@@ -1,0 +1,11 @@
+--- eldbus-1.7.10/Makefile.am.orig	2013-08-05 22:09:01.000000000 +0200
++++ eldbus-1.7.10/Makefile.am	2014-01-25 20:24:14.721512000 +0100
+@@ -71,7 +71,7 @@
+ 	src/lib/eldbus_message_helper.h \
+ 	src/lib/eldbus_message_eina_value.h
+ 
+-libeldbus_la_LIBADD = @ECORE_LIBS@ @DBUS_LIBS@
++libeldbus_la_LIBADD = @ECORE_LIBS@ @EINA_LIBS@ @DBUS_LIBS@
+ libeldbus_la_LDFLAGS = @EFL_LTLIBRARY_FLAGS@
+ libeldbus_la_SOURCES = \
+ 	src/lib/eldbus_private.h \
