@@ -10,7 +10,7 @@ Summary:	Easy access to D-Bus from EFL applications
 Summary(pl.UTF-8):	Łatwy dostęp do usługi D-Bus z aplikacji EFL
 Name:		eldbus
 Version:	1.7.10
-Release:	1
+Release:	2
 License:	LGPL v2.1+
 Group:		Libraries
 Source0:	http://download.enlightenment.org/releases/%{name}-%{version}.tar.bz2
